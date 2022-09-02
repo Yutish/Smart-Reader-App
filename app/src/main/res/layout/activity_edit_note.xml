@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?><!---->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical"
+    tools:context=".EditNote">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@android:color/white"
+            android:onClick="deleteNote"
+            android:padding="10dp"
+            android:src="@drawable/ic_delete_grey_24dp" />
+
+        <ImageButton
+            android:id="@+id/speakOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@android:color/white"
+            android:onClick="speakText"
+            android:padding="10dp"
+            android:src="@drawable/ic_speak_out_black_24dp" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@android:color/white"
+            android:onClick="saveText"
+            android:padding="10dp"
+            android:src="@drawable/ic_save_black_24dp" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@android:color/white"
+            android:onClick="shareText"
+            android:padding="10dp"
+            android:src="@drawable/ic_share_black_24dp" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/speedSeekBarEditNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/item_shape"
+        android:backgroundTint="@android:color/white"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/notes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_shape"
+        android:backgroundTint="@android:color/background_light"
+        android:gravity="top"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+</LinearLayout>
